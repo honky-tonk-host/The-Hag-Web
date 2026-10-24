@@ -1,0 +1,128 @@
+:root {
+  --red_american: #b42033;
+  --white_american: #fefefe;
+  --blue_american: #3c3b6e;
+}
+
+.headerInaMain,
+section span,
+span.hag,
+header {
+  font-family: "rye", Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--red_american);
+  margin: 0;
+  padding: 10px;
+  background-color: var(--blue_american);
+  line-height: 1.2rem;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--red_american);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--white_american);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 4px 4px 8px var(--blue_american);
+}
+
+main {
+  background-color: var(--white_american);
+  padding: 5rem;
+  margin: 2rem auto;
+  box-shadow: 0 2px 4px var(--red_american);
+}
+
+.headerInaMain {
+  color: var(--red_american);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px var(--blue_american);
+}
+
+a {
+  color: var(--red_american);
+  text-decoration: 1px underline;
+}
+a:hover {
+  color: var(--blue_american);
+  text-decoration: none;
+  cursor: crosshair;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+section span {
+  color: var(--blue_american);
+  text-shadow: 2px 2px 4px var(--red_american);
+}
+
+span.hag {
+  color: var(--blue_american);
+  text-shadow: 2px 2px 4px var(--red_american);
+}
+
+header {
+  background-color: var(--red_american);
+  padding: 1rem;
+  margin: 0;
+  line-height: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px var(--white_american);
+  color: var(--white_american);
+}
+
+nav {
+  background-color: var(--white_american);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px var(--red_american);
+  color: var(--blue_american);
+  margin-bottom: 1rem;
+}
+
+/*
+Source - https://stackoverflow.com/a/13546879
+Posted by 222, modified by community. See post 'Timeline' for change history
+Retrieved 2026-10-24, License - CC BY-SA 4.0
+*/
+
+summary:hover {
+  cursor: crosshair;
+}
+
+summary {
+  font-weight: bold;
+  color: var(--red_american);
+}
+
+details {
+  color: black;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+ul li:before {
+  content: "\2605";
+  margin: 0 1em; /* any design */
+}
