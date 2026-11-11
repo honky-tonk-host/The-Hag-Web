@@ -11,22 +11,36 @@ header {
   font-family: "rye", Arial, Helvetica, sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--red_american);
-  margin: 0;
+  margin: 2rem;
   padding: 10px;
   background-color: var(--blue_american);
+  background-image:
+    linear-gradient(rgba(60, 59, 110, 0.7)), url("../img/Merle1964.webp");
+  background-size: cover;
   line-height: 1.2rem;
 }
 
 img {
-  display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: min(612px, 100%);
   height: auto;
-  align-items: center;
   box-shadow: 0 2px 4px var(--red_american);
+  filter: grayscale(1);
+}
+
+img:hover {
+  filter: none;
+}
+
+.imgHolder {
+  text-align: center;
 }
 
 h1,
@@ -37,15 +51,36 @@ h3 {
 }
 
 h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(0.5rem, 4vw, 6rem);
+  margin-bottom: 1rem;
   text-shadow: 4px 4px 8px var(--blue_american);
+}
+
+h2 {
+  font-size: clamp(0.2rem, 2vw, 3rem);
+  margin-bottom: 1rem;
+  text-shadow: 4px 4px 8px var(--blue_american);
+}
+
+main,
+footer,
+header,
+nav,
+.imgHolder {
+  margin-bottom: 2rem;
+}
+
+main,
+img,
+header,
+nav {
+  border: 1px var(--blue_american) solid;
+  border-radius: 1rem;
 }
 
 main {
   background-color: var(--white_american);
-  padding: 5rem;
-  margin: 2rem auto;
+  padding: 3rem;
   box-shadow: 0 2px 4px var(--red_american);
 }
 
@@ -65,10 +100,6 @@ a:hover {
   cursor: crosshair;
 }
 
-footer {
-  margin-top: 10px;
-}
-
 section span {
   color: var(--blue_american);
   text-shadow: 2px 2px 4px var(--red_american);
@@ -82,8 +113,7 @@ span.hag {
 header {
   background-color: var(--red_american);
   padding: 1rem;
-  margin: 0;
-  line-height: 2rem;
+  line-height: 3rem;
   text-align: center;
   box-shadow: 0 2px 4px var(--white_american);
   color: var(--white_american);
@@ -95,7 +125,6 @@ nav {
   text-align: center;
   box-shadow: 0 2px 4px var(--red_american);
   color: var(--blue_american);
-  margin-bottom: 1rem;
 }
 
 /*
@@ -109,8 +138,13 @@ summary:hover {
 }
 
 summary {
+  font-family: "rye";
   font-weight: bold;
   color: var(--red_american);
+}
+
+p a {
+  font-weight: bold;
 }
 
 details {
