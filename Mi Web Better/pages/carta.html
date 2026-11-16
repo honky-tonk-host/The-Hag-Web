@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country Wishes</title>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <link rel="icon" href="favicon-96x96.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rye&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="carta">
+    <header>
+      <div>
+        <iframe src="../PHP/countdown.php" class="countdown"></iframe>
+        <h1>Merle Haggard Super Fanboys</h1>
+        <h2>It's Christmas!!!</h2>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html"
+              >Homepage of <strong>Merle Haggard Fanboys</strong></a
+            >
+          </li>
+          <li>
+            <a href="pagina1.html"
+              >Read All about <strong>Merle Haggard</strong></a
+            >
+          </li>
+
+          <li>
+            <a href="imagenes.html"
+              >View Images of <strong>Merle Haggard</strong></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="../PHP/submit.php" method="post">
+        <h1>Christmas List for the Kings of their genre</h1>
+        <div class="boxo">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <section class="boxo">
+          <h2 class="obligatory">Choose your King!</h2>
+          <div class="selectionbox">
+            <div class="kingTable">
+              <div>
+                <label for="Merle-Haggard" title="Balthasar"
+                  >Merle Haggard</label
+                >
+                <input
+                  type="radio"
+                  id="Merle-Haggard"
+                  name="king"
+                  value="Merle Haggard"
+                  required
+                  checked
+                />
+              </div>
+              <p>King of Country</p>
+            </div>
+            <div class="kingTable">
+              <div>
+                <label for="Elvis-Presley" title="Melchior"
+                  >Elvis Presley</label
+                >
+                <input
+                  type="radio"
+                  id="Elvis-Presley"
+                  name="king"
+                  value="Elvis Presley"
+                  required
+                />
+              </div>
+              <p>King of Rock'n'Roll</p>
+            </div>
+            <div class="kingTable">
+              <div>
+                <label for="Bob-Wills" title="Gaspar">Bob Wills</label>
+                <input
+                  type="radio"
+                  id="Bob-Wills"
+                  name="king"
+                  value="Bob Wills"
+                  required
+                />
+              </div>
+              <p>King of Western-Swing</p>
+            </div>
+          </div>
+        </section>
+        <div class="boxo">
+          <label for="message">Write your christmas list to your king!</label>
+          <textarea id="message" name="message" rows="6"></textarea>
+        </div>
+        <div class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

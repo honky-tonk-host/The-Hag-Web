@@ -15,6 +15,27 @@ header {
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header nav,
+header h1,
+header h2 {
+  margin-bottom: 0;
+}
+
+.mainHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--red_american);
@@ -24,7 +45,6 @@ body {
   background-image:
     linear-gradient(rgba(60, 59, 110, 0.7)), url("../img/Merle1964.webp");
   background-size: cover;
-  line-height: 1.2rem;
 }
 
 img {
@@ -39,8 +59,11 @@ img:hover {
   filter: none;
 }
 
-.imgHolder {
+.imgHolder a {
+  display: block;
+
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 h1,
@@ -51,13 +74,19 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(0.5rem, 4vw, 6rem);
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3vw, 6rem);
+
   text-shadow: 4px 4px 8px var(--blue_american);
+}
+body.countdown {
+  font-size: 1.2rem
+  text-shadow: 4px 4px 8px var(--blue_american);
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-  font-size: clamp(0.2rem, 2vw, 3rem);
+  font-size: clamp(1rem, 1vw, 3rem);
   margin-bottom: 1rem;
   text-shadow: 4px 4px 8px var(--blue_american);
 }
@@ -76,6 +105,14 @@ header,
 nav {
   border: 1px var(--blue_american) solid;
   border-radius: 1rem;
+}
+nav ul {
+  display: inline-block;
+  text-align: left;
+}
+
+nav a {
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
 }
 
 main {
@@ -113,7 +150,7 @@ span.hag {
 header {
   background-color: var(--red_american);
   padding: 1rem;
-  line-height: 3rem;
+  line-height: 1.2;
   text-align: center;
   box-shadow: 0 2px 4px var(--white_american);
   color: var(--white_american);
@@ -159,4 +196,213 @@ ul {
 ul li:before {
   content: "\2605";
   margin: 0 1em; /* any design */
+}
+
+/* =========================================================
+   CARTA (Christmas page)
+   Everything below only applies to <body class="carta">.
+   The header + nav stay shared with the rest of the site.
+   ========================================================= */
+
+/* Undo the site-wide body look and put the Christmas tile back */
+.carta {
+  font-family: Arial, sans-serif;
+  color: black;
+  line-height: 1.2;
+  background-color: #f9f9f9;
+  background-image: url("../img/merle-xmas-tile.webp");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+/* The form sits straight on the tile, not inside the white main box */
+.carta main {
+  background: none;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.carta form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 80rem;
+  margin: 0 auto;
+  outline: 2px solid goldenrod;
+  padding: 1rem;
+  background-color: #f1f0f2;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(241, 240, 242, 1.1),
+      rgba(224, 224, 224, 0.5)
+    ),
+    url("../img/Merle1985.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-shadow: red 1px 1px 2px;
+  font-size: clamp(1rem, 1.3vw, 2rem);
+}
+
+/* Form headings: drop the white site heading style, keep browser sizes */
+.carta form h1,
+.carta form h2 {
+  color: inherit;
+  text-shadow: inherit;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.carta form h1 {
+  margin-top: 1rem;
+  color: goldenrod;
+  font-family: "Rye", serif; 
+  text-shadow: 2px 0 var(--red_american);
+}
+
+.carta form h1::before,
+.carta form h1::after {
+  content: " 🎄 ";
+}
+
+.carta .boxo {
+  margin: 1rem auto;
+  outline: 2px solid gold;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 80%;
+}
+
+.carta #name {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.carta form div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.carta .selectionbox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-between;
+}
+
+.carta .selectionbox div {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta label {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.carta input,
+.carta textarea {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.carta input {
+  text-align: center;
+}
+
+.carta textarea {
+  resize: vertical;
+}
+
+.carta input[type="color"] {
+  height: 5rem;
+  width: 8rem;
+  margin: auto;
+}
+
+.carta .file-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.carta .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.carta button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 45%;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.carta .obligatory::after {
+  content: "*";
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.carta .selectionbox .kingTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.carta .kingTable > div {
+  gap: 0.5rem;
+}
+
+.carta .kingTable p {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+  margin-top: 0.25rem;
+}
+
+.carta .kingTable input[type="radio"] {
+  accent-color: gold;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+header .christmasText a,
+header .christmasText {
+  color: goldenrod;
+}
+
+header .christmasText a:hover {
+  color: var(--red_american);
+}
+
+body.countdown {
+  background-image: none;
+  background-color: transparent;
+  margin: 0;
+  color: goldenrod;
+  text-align: center;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 1.5rem;
+  margin-bottom: 0;
+  display: block;
 }
