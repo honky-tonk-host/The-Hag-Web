@@ -6,6 +6,6 @@ $stmt = $pdo->query("SELECT king FROM Cartas WHERE id = (SELECT max(id) FROM Car
 $carta = $stmt->fetch();
 
 
-$arbre="...YY...\n..YWWY..\n...YY...\n...GG...\n..GGGG..\n.GGGGGG.\n...BB...\n...BB...";
+$arbre="...YY...\n..YWWY..\n...YY...\n...GG...\n..GGRG..\n.GRGGGG.\n...BB...\n...BB...";
 
 echo $carta['king'] . "\n" . $arbre;
